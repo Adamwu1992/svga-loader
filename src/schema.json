@@ -1,0 +1,11 @@
+{
+  "title": "SVGA Loader options",
+  "type": "object",
+  "properties": {
+    "module": {
+      "description": "By default, svga-loader generates JS modules that use the ES modules syntax.",
+      "enum": ["esm", "cjs"]
+    }
+  },
+  "additionalProperties": false
+}

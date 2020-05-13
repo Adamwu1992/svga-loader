@@ -1,0 +1,33 @@
+{
+  "name": "svga-loader",
+  "version": "0.1.0",
+  "description": "SVGA loader for Webpack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo hello SVGA"
+  },
+  "repository": {
+    "type": "git",
+    "url": "todo"
+  },
+  "keywords": [
+    "svga",
+    "webpack",
+    "loader"
+  ],
+  "author": "Adam Wu",
+  "license": "MIT",
+  "dependencies": {
+    "loader-utils": "^2.0.0",
+    "mime-types": "^2.1.27",
+    "pako": "^1.0.11",
+    "protobufjs": "^6.9.0",
+    "schema-utils": "^2.6.6"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
