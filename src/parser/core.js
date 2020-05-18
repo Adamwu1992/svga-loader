@@ -8,22 +8,15 @@ const svgaDescriptor = require('./desc.json')
  * @param {Uint8Array} input 
  */
 module.exports = function parse(input) {
-  let svga
-  try {
-    // const root = protobuf.loadSync(path.resolve(__dirname, '..', 'svga.proto'))
-    const root = protobuf.Root.fromJSON(svgaDescriptor)
-    svga = root.lookupType('com.opensource.svga.MovieEntity')
-  } catch (e) {
-    console.log('get svga fail')
-  }
-  
+  const root = protobuf.Root.fromJSON(svgaDescriptor)
+  const svga = root.lookupType('com.opensource.svga.MovieEntity')
   let data
   try {
     data = svga && svga.decode(
       pako.inflate(input)
     )
   } catch (e) {
-    console.log('pako fail', e)
+    console.error(e)
     return
   }
   const images = {}

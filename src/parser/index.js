@@ -5,13 +5,6 @@ module.exports = function(source) {
   if (typeof source === 'string') {
     source = Buffer.from(source)
   }
-  let data
-  try {
-    data = parse(source)
-  } catch (e) {
-    console.log('parsr fail')
-  }
-  console.log('--------')
-  console.log(Object.keys(data))
+  const data = parse(source)
   return data && new VideoEntity(data)
 }
