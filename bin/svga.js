@@ -59,8 +59,6 @@ if (program.dir) {
   return
 }
 
-console.log(files)
-
 for (const { input, output } of files) {
   fs.readFile(input, (err, data) => {
     if (err) {
@@ -71,6 +69,10 @@ for (const { input, output } of files) {
     fs.writeFile(output, JSON.stringify(json), err => {
       if (err) {
         console.error(err)
+      } else {
+        console.log('form: ', input)
+        console.log('to:', output)
+        console.log()
       }
     })
   })
